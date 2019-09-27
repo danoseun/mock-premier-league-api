@@ -1,0 +1,45 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [
+
+        {
+            "command": [
+                "npm run start:dev"
+              ],
+            "name":"api",
+            "image":"oseun/sterlin-server",
+            "hostname": "api",
+            "essential": false,
+            "memory": 128
+        },
+
+        {
+            "name":"redis",
+            "essential": true,
+            "image": "redis:latest",
+            "memory": 128,
+            "hostname": "redis",
+            "portMappings": [
+              {
+                "containerPort": 6379,
+                "hostPort": 6379
+              }
+            ]
+          },
+        {
+            "name":"nginx",
+            "image":"oseun/sterlin-nginx",
+            "hostname": "nginx",
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "containerPort":80
+                }
+            ],
+            "links":["api"],
+            "memory": 128
+        }
+
+    ]
+}

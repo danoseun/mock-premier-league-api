@@ -1,0 +1,39 @@
+version: '3'
+services:
+  redis:
+    image: 'redis:latest'
+    env_file: .env
+    networks: 
+      - redis_nw
+
+  nginx:
+    restart: always
+    build:
+      dockerfile: Dockerfile.dev
+      context:  ./nginx
+    networks: 
+      - api_nw
+    ports:
+      - "5050:80"
+
+  api:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    command: 'npm run start:dev'
+    env_file: .env
+    networks: 
+      - api_nw
+      - redis_nw
+    volumes:
+      - /app/node_modules
+      - ./src:/app
+
+
+
+networks:
+  api_nw:
+    driver: bridge
+  redis_nw:
+    driver: bridge
+
