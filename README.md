@@ -59,7 +59,7 @@ npm test
 
   - An admin account has already been created to access admin protected endpoints.
   
-  - Only created eams can be added to a fixture. Any attempt to add a team not created will throw an error.
+  - Only created teams can be added to a fixture. Any attempt to add a team not created will throw an error.
   
   - The date format to be used to interact with the API is 2019-09-26(YEAR-MONTH-DAY).
   
