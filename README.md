@@ -35,7 +35,7 @@ To install and run this project you would need to have Node.js installed.
 
 - Create a .env file in the root directory of the cloned project and add the following:
   - mongodb connection=
-  - SECRETKEY=
+  - SECRETKEY=<JWT secret key>
   - ROUNDS=<Number of rounds to hash password>
   - REDIS_LINK=
 
