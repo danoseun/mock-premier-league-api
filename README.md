@@ -31,13 +31,11 @@ An API that serves the latest scores of fixtures of matches in a “Mock Premier
 
 ## Requirements and Installation
 
-To install and run this project you would need to have listed stack installed:
+To install and run this project you would need to have Node.js installed.
 
-- Node.js
-
-- Create a .env file in the root of the cloned project and add
-  - mongodb connection
-  - SECRETKEY
+- Create a .env file in the root directory of the cloned project and add the following:
+  - mongodb connection=
+  - SECRETKEY=
   - ROUNDS=<Number of rounds to hash password>
   - REDIS_LINK=
 
@@ -66,6 +64,8 @@ npm test
   - The date format to be used to interact with the API is 2019-09-26(YEAR-MONTH-DAY).
   
   - Only the homeTeamScore and awayTeamScore fields have been exposed for the update fixture endpoint.
+  
+  - The API documentation on POSTMAN carries these details too.
   
 ## API-ENDPOINTS
 
