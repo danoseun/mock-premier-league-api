@@ -121,7 +121,7 @@ The API is hosted on AWS(Amazon Web Services)
 
 ## API Documentation
 
-[https://documenter.getpostman.com/preview/2851236-f79758e3-c124-4117-8f2e-926891355794?versionTag=latest&apiName=CURRENT&version=latest&top-bar=ffffff&right-sidebar=303030&highlight=ef5b25](https://documenter.getpostman.com/preview/2851236-f79758e3-c124-4117-8f2e-926891355794?versionTag=latest&apiName=CURRENT&version=latest&top-bar=ffffff&right-sidebar=303030&highlight=ef5b25)
+[https://documenter.getpostman.com/view/2851236/SW15zciT](https://documenter.getpostman.com/view/2851236/SW15zciT)
 
 ## Author
 
